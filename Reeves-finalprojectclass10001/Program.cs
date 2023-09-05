@@ -40,12 +40,12 @@ namespace MazeGame
                 // Check for end game conditions. (JamesR)
                 if (maze[playerX, playerY] == 'E')
                 {
-                    Console.WriteLine("You won!");
+                    Console.WriteLine("\nYou won!");
                     return;
                 }
                 else if (maze[playerX, playerY] == 'T')
                 {
-                    Console.WriteLine("You hit a trap! Game over!");
+                    Console.WriteLine("\nYou hit a trap! Game over!");
                     return;
                 }
 
@@ -54,7 +54,7 @@ namespace MazeGame
             }
 
             // Player ran out of moves. (JamesR)
-            Console.WriteLine("Out of moves! Game over!");
+            Console.WriteLine("\nOut of moves! Game over!");
         }
 
         static void InitializeMaze()
@@ -82,6 +82,7 @@ namespace MazeGame
         static void DisplayMaze()
         {
             // Loop through each cell in the maze and display its content. (JamesR)
+            Console.WriteLine();
             for (int i = 0; i < mazeSize; i++)
             {
                 for (int j = 0; j < mazeSize; j++)
